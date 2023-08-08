@@ -21,6 +21,7 @@ eval(df_dx)   #will evaluate the slope with x=10
 ```
 
 ## Find the Slope for g(z)= 2z^3^ - 10.5z^2^ +4.1 at z=3.6
+
 ```{r}
 gz <- expression(2*z^3 - 10.5*z^2 +4.1)
 #expression is made and stored
@@ -50,7 +51,7 @@ eval(df_dz)
 
 this has been a change
 
-
+this is another change
 
 
 
