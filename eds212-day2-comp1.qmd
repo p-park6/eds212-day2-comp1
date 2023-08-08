@@ -1,0 +1,58 @@
+---
+title: "eds212-day2-comp1"
+format: html
+editor: visual
+---
+
+# Derivatives in R
+
+```{r}
+#first create an expression
+fx = expression(3.1 * (x ^ 4) - 28 *x)
+#expression is now stored
+df_dx<-D(fx, 'x')    #this line will find the derivative, and this is being stored on df_dx
+df_dx   #this will show me what df_dx is
+```
+
+```{r}
+#asking what the slope is at x=10
+x <- 10
+eval(df_dx)   #will evaluate the slope with x=10
+```
+
+## Find the Slope for g(z)= 2z^3^ - 10.5z^2^ +4.1 at z=3.6
+```{r}
+gz <- expression(2*z^3 - 10.5*z^2 +4.1)
+#expression is made and stored
+df_dz <- D(gz, 'z')
+#derivative is made and can be found
+df_dz
+#show derivative
+z <- 3.6
+#z is now stored with a value
+eval(df_dz)
+#slope is found
+```
+
+```{r}
+#finding a derivative over a sequence of values
+gz <- expression(2*z^3 - 10.5*z^2 +4.1)
+#expression is made and stored
+df_dz <- D(gz, 'z')
+#derivative is made and can be found
+df_dz
+#show derivative
+z <- seq(from=1,to=3,length=20)
+#z is now stored with sequence of values
+eval(df_dz)
+#slope is found
+```
+
+
+
+
+
+
+
+
+
